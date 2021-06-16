@@ -1,0 +1,21 @@
+#Profile,
+body {
+  background-color: #2f2926;
+  height: 100vh;
+}
+
+.profile-text {
+  color: white;
+}
+
+.profile-text-order {
+  color: white;
+  margin: 2rem 0 0 1rem;
+}
+
+.profile-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
