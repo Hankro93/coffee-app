@@ -1,22 +1,22 @@
 import {useState, useEffect} from 'react'
 import './OrderHistory.scss';
+import { useContext } from 'react'
+import { UserContext } from '../App.js'
 
 function OrderHistory() {
   const [posts, setPosts] = useState([])
+  const username = useContext(UserContext)
 
   useEffect(() => {
     async function getState() {
-      const response = await fetch('http://localhost:8000/api/order/johanna')
+      const response = await fetch('http://localhost:8000/api/order/' + username)
       const data = await response.json()
-console.log('getState:', data)
-setPosts(data)
+    setPosts(data)
      
-
       }
   getState()
-}, [])
+}, [username])
   
-
   return (
       <ul className="order-wrap">
         {
@@ -32,7 +32,6 @@ posts.map(post => <div>
   </div>
 
   )
- 
         }
         
       </ul>
