@@ -56,6 +56,7 @@ function Menu() {
 
   return (
     <div id="Menu">
+      {/* CART */}
       <Header />
     <div>
       <div id="big-circle">

@@ -8,15 +8,16 @@ function MenuThing({ task }) {
   var number = 0
 
   function SetClick() {
-   number++
+    number++
    document.getElementById("number").innerHTML = number
    dispatch(OrdAction.addOrder(task))
+   
   }
   
   return (
     <div>
       <div id="wrap-thing">
-      <img role="button" onClick={ () => { SetClick(task) }}  src={PLUS} alt=""/>
+      <img className="But" role="button" onClick={ () => { SetClick(task) }}  src={PLUS} alt=""/>
       <li className="title">{ task.title }... </li>
       <li className="price">{ task.price } kr</li>
       </div>

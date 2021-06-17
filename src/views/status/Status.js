@@ -13,7 +13,7 @@ function SendOk() {
 }
 
   return (
-<section className="Status">
+<section id="Status">
   <div className="wrap-status">
     <p className="status-p">Ordernummer #{orderStatus.id}</p>
     <img src={ Drone } alt="" className="Drone" />
