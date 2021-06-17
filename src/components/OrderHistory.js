@@ -7,6 +7,8 @@ function OrderHistory() {
   const [posts, setPosts] = useState([])
   const username = useContext(UserContext)
 
+/*   const email = useContext(UserContext)  */ //
+
   useEffect(() => {
     async function getState() {
       const response = await fetch('http://localhost:8000/api/order/' + username)
@@ -15,26 +17,33 @@ function OrderHistory() {
      
       }
   getState()
-}, [username])
+}, [username]) //
   
   return (
+
+    <div id="Order-his">
       <ul className="order-wrap">
         {
           
 posts.map(post => <div>
-  <li className="order-list" key={post.id}>
-  #{post.id}</li>
-  <li className="order-list">{post.orderTime}</li>
-  <li className="order-list">total ordersumma {post.price} kr</li>
+  <li 
+  className="order-list" 
+  key={`index-${ post.id }`}>#{post.id}
+  </li>
+  <li className="order-list">
+    {post.orderTime}
+    </li>
+  <li className="order-list">
+    total ordersumma {post.price} kr
+    </li>
   <hr></hr>
-  
-  
   </div>
 
   )
         }
         
       </ul>
+      </div>
   )
 }
 

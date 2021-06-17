@@ -20,7 +20,7 @@ function SendOk() {
 
   <div className="wrap-status">
 
-    <p className="status-p">{orderStatus.id}</p>
+    <p className="status-p">Ordernummer #{orderStatus.id}</p>
 
     <img src={ Drone } alt="" className="Drone" />
 <h1 className="status-heading">Din beställning är på väg!</h1>

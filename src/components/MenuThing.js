@@ -7,7 +7,7 @@ function MenuThing({ task }) {
   const dispatch = useDispatch()
   var number = 0
 
-  function countClick() {
+  function SetClick() {
    number++
    document.getElementById("number").innerHTML = number
    dispatch(OrdAction.addOrder(task))
@@ -15,9 +15,9 @@ function MenuThing({ task }) {
 
   return (
     <div>
-      <div id="one-row">
-      <img role="button" onClick={ () => { countClick(task) }} id="add" src={PLUS} alt=""/>
-      <li className="title">{ task.title } </li>
+      <div id="wrap-thing">
+      <img role="button" onClick={ () => { SetClick(task) }}  src={PLUS} alt=""/>
+      <li className="title">{ task.title }... </li>
       <li className="price">{ task.price } kr</li>
       </div>
       <li id="desc">{ task.desc }</li>

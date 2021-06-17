@@ -49,21 +49,15 @@ function Menu() {
     })
       .then((response) => response.json())
       .then(result => {
-      console.log('Success:', result)
-      console.log('postOrder:', result)
-
+     
       const status = {
         id: result.id,
         eta: result.eta
       }
-
       dispatch(OrdAction.postOrder(status))
       history.push("/Status")
    })
-     
-    
   }
-
 
   return (
     <div id="Menu">
@@ -80,6 +74,7 @@ function Menu() {
         overlayClassName="the-overlay"
         
       >
+      
         <h2 id="title-overlay">Din beställning</h2>
 
         <ul className="order-list-overlay">
@@ -88,7 +83,7 @@ function Menu() {
             }) }
         </ul>
 
-        <p id="total">Total.................................</p> 
+        <p id="total">Total.......................................</p> 
         <p id="moms">Inkl moms + drönarleverans</p>
 
         <button id="pay" onClick={ handlePay }>Take my money!</button>
@@ -116,19 +111,3 @@ function Menu() {
 
 export default Menu
 
-/* function Menu() {
-  return (
-<section id="Menu">
-  <Header />
-    <h1>Meny</h1>
-   
-    <img src={Foot} alt="" className="Footer"/>
-    </section>
-  )
-}
-
-fetch('http://localhost:8000/api/coffee')
-  .then(response => response.json())
-  .then(data => console.log(data));
-
-export default Menu */

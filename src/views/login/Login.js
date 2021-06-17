@@ -6,10 +6,10 @@ import { useHistory } from 'react-router-dom'
 import Header from "../../components/Header"
 import Logga from '../../Vectors/Group 6.png'
 
-//
 const UserContext = createContext(undefined)
+const UpdateContext = createContext(undefined)//
 
-function Login({update}) {
+function Login({update, updateEmail}) {
   const [newName, setNewName] = useState('')
   const [newEmail, setNewEmail] = useState('')
 
@@ -38,6 +38,8 @@ const history = useHistory()
       .then(result => {
       console.log('Success:', result)
       update(newName, /* newEmail */) 
+      updateEmail(newEmail) //
+
       history.push('/Profile')
 
    })
@@ -84,4 +86,4 @@ const history = useHistory()
     </section>
   )
 }
-export { Login, UserContext }
+export { Login, UserContext, UpdateContext }
