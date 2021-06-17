@@ -1,17 +1,14 @@
 import Header from "../../components/Header"
 import './About.scss';
-
-
 import VD from '../../Vectors/image 1.png'
 import Foot from '../../Vectors/header.png'
 
 function About() {
+  
   return (
-
     <section id="About">
       <Header />
 <h1 className="leftalign">Vårt kaffe</h1>
-
 <p className="leftaligntext">
   <b>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.</b>
 </p>
@@ -26,7 +23,6 @@ Roast id macchiato, single shot siphon mazagran milk fair trade est aroma a half
 <h3>Eva Cortado</h3>
 <p className="VD-text">VD och Grundare</p>
 </div>
-
 <img src={Foot} alt="" className="Footer" />
     </section>
   )

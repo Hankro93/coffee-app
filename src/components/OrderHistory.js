@@ -7,17 +7,14 @@ function OrderHistory() {
   const [posts, setPosts] = useState([])
   const username = useContext(UserContext)
 
-/*   const email = useContext(UserContext)  */ //
-
   useEffect(() => {
     async function getState() {
       const response = await fetch('http://localhost:8000/api/order/' + username)
       const data = await response.json()
     setPosts(data)
-     
       }
   getState()
-}, [username]) //
+}, [username]) 
   
   return (
 
@@ -39,12 +36,11 @@ posts.map(post => <div>
   <hr></hr>
   </div>
 
-  )
-        }
-        
+            )
+          } 
       </ul>
       </div>
-  )
-}
+    )
+  }
 
 export default OrderHistory;

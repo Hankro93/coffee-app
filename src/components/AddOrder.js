@@ -8,9 +8,7 @@ function AddOrder({ task }) {
         </li>
         <li className="price-cart">{ task.task.price } kr
         </li>
-       
         </div>
-       
     )
   }
   

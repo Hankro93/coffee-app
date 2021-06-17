@@ -12,7 +12,7 @@ function MenuThing({ task }) {
    document.getElementById("number").innerHTML = number
    dispatch(OrdAction.addOrder(task))
   }
-
+  
   return (
     <div>
       <div id="wrap-thing">
